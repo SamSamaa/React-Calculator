@@ -1,0 +1,28 @@
+.nameInput {
+  font-size: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+input {
+  border: none;
+  border-radius: 3px;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.4);
+  width: fit-content;
+  outline: none;
+  font-size: 4rem;
+  margin: 0 50px;
+  color: #551a8b;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: #cca0ab;
+}
+
+.nextLink {
+  text-align: end;
+}
