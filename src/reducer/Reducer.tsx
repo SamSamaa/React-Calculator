@@ -25,7 +25,7 @@ export const calculatorReducer = (state: State, action: Action) => {
 
     /** ADD AN OPERATOR (+,-,*,/)  */
     case 'ADD_OPERATOR':
-      if (state.currentOperation === null && state.result === null) return state;
+      if (state.currentOperation === "" && state.result === null) return state;
       if (state.currentOperation && parseFloat(state.currentOperation) === Number.POSITIVE_INFINITY) return {};
       if (state.result === null)
         return {
@@ -62,12 +62,12 @@ export const calculatorReducer = (state: State, action: Action) => {
 
     /** DELETE LAST INPUT */
     case 'DELETE':
-      if (state.resetResult)
-        return {
-          ...state,
-          currentOperation: null,
-          resetResult: false
-        };
+      // if (state.resetResult)
+      //   return {
+      //     ...state,
+      //     currentOperation: null,
+      //     resetResult: false
+      //   };
       if (state.currentOperation === null) return state;
       if (state.currentOperation?.length === 1)
         return {
@@ -77,7 +77,7 @@ export const calculatorReducer = (state: State, action: Action) => {
       if (state.currentOperation)
         return {
           ...state,
-          currentOperation: state.currentOperation.slice(0, -1),
+          currentOperation: state.currentOperation.slice(0, -1)
         }
 
       return state;

@@ -12,16 +12,19 @@ const Calculator = () => {
   });
 
   const [isRotate, setIsRotate] = useState<boolean>(false);
+  const [changeDisplayBackground, setChangeDisplayBackground] = useState<boolean>(false);
 
   return (
     <div className={isRotate ? "rotate wrapper" : "wrapper"}>
       <div className="displayScreen">
-        <div>{result} {operator} {currentOperation}</div>
+        <div className={changeDisplayBackground ? "backgroundPicture" : ""}>{result} {operator} {currentOperation}</div>
       </div>
       <Buttons
         dispatch={dispatch}
         isRotate={isRotate}
         setIsRotate={setIsRotate}
+        changeDisplayBackground={changeDisplayBackground}
+        setChangeDisplayBackground={setChangeDisplayBackground}
       />
     </div>
   )

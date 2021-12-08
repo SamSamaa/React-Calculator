@@ -5,13 +5,21 @@ import RotateImg from '../../assets/rotateImg.png';
 
 import './Buttons.css';
 
-const Buttons = ({ dispatch, isRotate, setIsRotate }: { dispatch: React.Dispatch<Action>, isRotate: boolean, setIsRotate: (b: boolean) => void }) => {
+interface ButtonsProps {
+  dispatch: React.Dispatch<Action>
+  isRotate: boolean
+  setIsRotate: (b: boolean) => void
+  changeDisplayBackground: boolean
+  setChangeDisplayBackground: (b: boolean) => void
+}
+
+const Buttons = ({ dispatch, isRotate, setIsRotate, changeDisplayBackground, setChangeDisplayBackground }: ButtonsProps) => {
 
   return (
     <div className="buttonsBox">
       <button onClick={() => dispatch({ type: 'RESET' })}>C</button>
       <button onClick={() => dispatch({ type: "DELETE" })}>DEL</button>
-      <button>o</button>
+      <button onClick={() => setChangeDisplayBackground(!changeDisplayBackground)}>o</button>
       <OperatorButton operator="÷" dispatch={dispatch} />
       <NumberButton digit="7" dispatch={dispatch} />
       <NumberButton digit="8" dispatch={dispatch} />
