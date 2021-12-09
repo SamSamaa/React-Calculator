@@ -1,5 +1,4 @@
 import { State } from "./types/types";
-import Decimal from "decimal.js-light";
 
 export function OperationLogic({ currentOperation, result, operator }: State) {
   const res = result && parseFloat(result);
@@ -29,4 +28,4 @@ export function OperationLogic({ currentOperation, result, operator }: State) {
   const round = Math.round(calculation * 1e15) / 1e15;
 
   return round.toString();
-}
+};
