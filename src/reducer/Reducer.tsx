@@ -3,7 +3,6 @@ import { Action, State } from "../utils/types/types";
 
 export const calculatorReducer = (state: State, action: Action) => {
   switch (action.type) {
-
     /** ADD A NUMBER  */
     case 'ADD_NUMBER':
       if (state.resetResult) {
@@ -62,12 +61,6 @@ export const calculatorReducer = (state: State, action: Action) => {
 
     /** DELETE LAST INPUT */
     case 'DELETE':
-      // if (state.resetResult)
-      //   return {
-      //     ...state,
-      //     currentOperation: null,
-      //     resetResult: false
-      //   };
       if (state.currentOperation === null) return state;
       if (state.currentOperation?.length === 1)
         return {

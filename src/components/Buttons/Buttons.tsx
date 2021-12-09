@@ -14,7 +14,6 @@ interface ButtonsProps {
 }
 
 const Buttons = ({ dispatch, isRotate, setIsRotate, changeDisplayBackground, setChangeDisplayBackground }: ButtonsProps) => {
-
   return (
     <div className="buttonsBox">
       <button onClick={() => dispatch({ type: 'RESET' })}>C</button>

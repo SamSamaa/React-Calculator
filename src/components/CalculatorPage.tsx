@@ -9,7 +9,7 @@ const CalculatorPage = () => {
 
   return (
     <div className="calculatorPage">
-      <h1>HAVE FUN <br />{userName.toUpperCase()}</h1>
+      <span>HAVE FUN <br />{userName.toUpperCase()}</span>
       <Calculator />
     </div>
   )

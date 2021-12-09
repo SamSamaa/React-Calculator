@@ -1,4 +1,4 @@
-.calculatorPage>h1 {
+.calculatorPage>span {
   position: absolute;
   transform: rotate(-45deg);
   z-index: -1;
