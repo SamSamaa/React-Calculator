@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router";
 import { GlobalContext } from "./context/GlobalContext";
-import Calculator from "./components/Calculator/Calculator";
 import NameInput from "./components/NameInput/NameInput";
 import CalculatorPage from "./components/CalculatorPage";
 

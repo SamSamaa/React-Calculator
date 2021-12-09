@@ -19,7 +19,7 @@ const Buttons = ({ dispatch, isRotate, setIsRotate, changeDisplayBackground, set
     <div className="buttonsBox">
       <button onClick={() => dispatch({ type: 'RESET' })}>C</button>
       <button onClick={() => dispatch({ type: "DELETE" })}>DEL</button>
-      <button onClick={() => setChangeDisplayBackground(!changeDisplayBackground)}>o</button>
+      <button onClick={() => setChangeDisplayBackground(!changeDisplayBackground)}>🐶</button>
       <OperatorButton operator="÷" dispatch={dispatch} />
       <NumberButton digit="7" dispatch={dispatch} />
       <NumberButton digit="8" dispatch={dispatch} />
